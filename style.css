@@ -7,12 +7,82 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
-h1 { 
+header h1 { 
 	padding: 20px;
 	color: rgb(0, 255, 0);
     font-family: Helvetica, sans-serif;
-    font-size: 42px;
+    font-size: 22px;
     text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
+}
+
+/* -- Header ------------- */
+header {
+	background-color: rgba(100, 100, 100);
+	width: 100%;
+	height: 50px;
+	text-align: center;
+    /* center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- FOOTER ------------- */
+footer {
+    background-color: rgb(100, 100, 100);   
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0px;
+    width: 100%;
+}
+
+/* Social Icons Row */
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Each icon gets its brand color on hover */
+.footer-social a:hover .fa-facebook  { color: #1877F2; }
+.footer-social a:hover .fa-youtube   { color: #FF0000; }
+.footer-social a:hover .fa-instagram { color: #E1306C; }
+.footer-social a:hover .fa-tiktok    { color: #69C9D0; }
+
+/* Footer Nav Links */
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    font-size: 14px;
+}
+
+/* Copyright text */
+.footer-copy {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    margin: 0;
 }
