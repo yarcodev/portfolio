@@ -251,10 +251,12 @@ footer {
     .search-box {
         position: absolute;
         right: 20px;
+        cursor: pointer;
     }
-    .search-box input { 
-        width: 80px; 
-    }
+    .search-box input { display: none; }
+    .search-box i { font-size: 20px; }
+    .search-box.open { display: flex; }
+    .search-box.open input { display: block; }
 
     nav {
         display: none;
