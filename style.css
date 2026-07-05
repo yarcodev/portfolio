@@ -1,88 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
+	background-color: rgb(0, 0, 0);
+    color: silver;
 	width: 100%;
-	max-width: 1200px;
 	margin: auto;
 	text-align: center;
-	font-family: Helvetica, sans-serif;
+	font-family: serif, Helvetica ;
 }
 
-header h1 { 
-	padding: 20px;
-	color: rgb(0, 255, 0);
-    font-family: Helvetica, sans-serif;
-    font-size: 22px;
-    text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 1px;
-}
 
+/* ----------------------- */
 /* -- Header ------------- */
+
 header {
-	background-color: rgba(100, 100, 100);
-	width: 100%;
-	height: 50px;
-	text-align: center;
-    /* center content vertically */
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
+
+/* -- LOGO -- */
+#logo {
+    color: rgb(0, 255, 0);
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* -- HELLO WORLD heading -- */
+#hi {
+    border: none;
+    color: rgb(200, 0, 255);
+    font-size: clamp(22px, 2.5vw, 28px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* -- SEARCH BOX -- */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+.search-box input {
+    background: rgba(255,255,255,0.1);
+    border: 0.5px solid rgba(255,255,255,0.3);
+    border-radius: 20px;
+    padding: 4px 12px;
+    color: white;
+    font-size: clamp(11px, 1.2vw, 14px);
+    width: clamp(80px, 10vw, 150px);
+    outline: none;
+}
+.search-box i {
+    color: white;
+    font-size: clamp(14px, 1.5vw, 18px);
+}
+
+
+/* -- HAMBURGER BUTTON (hidden on desktop, pop up on moible and tablet) -- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
+/* Navigation links*/
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid rgba(255,255,255,0.2); 
+    display: flex;
+    justify-content: center;
+	text-align: center;      
+    gap: clamp(10px, 2vw, 20px);
+	flex-wrap: wrap;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 60px;
+    z-index: 998;
+}
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: clamp(13px, 2vw, 15px);
+    letter-spacing: 1px;
+    color: silver;
+    padding: 5px 5px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+/* Mouse Hover */
+nav a:hover {
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+/* ----------------------- */
+/* -- MAIN --------------- */
+main {
+  padding: 40px 20px;
+}
+main h1 {
+  color: white;
+  font-size: clamp(22px, 4vw, 36px);
+  margin-bottom: 10px;
+}
+main p {
+  color: rgba(255, 255, 255);
+  font-size: clamp(14px, 1.5vw, 18px);
+  margin-bottom: 8px;
+}
+
+
+
+
+/* ----------------------- */
 /* -- FOOTER ------------- */
 footer {
-    background-color: rgb(100, 100, 100);   
+    background-color: rgb(0, 0, 0);  
+    border-top: 0.5px solid rgba(255,255,255,0.2); 
     color: white;
     text-align: center;
-    margin-top: 60px;
-    padding: 40px 0px;
+    margin-top: 50px;
+    padding: 30px 20px;
     width: 100%;
 }
 
-/* Social Icons Row */
+/* Social Icons */
 .footer-social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 20px);
     margin-bottom: 20px;
 }
-
 .footer-social a {
     color: white;
-    font-size: 24px;
-    margin: 0 12px;
+    font-size: clamp(18px, 2vw, 24px);
+    margin: 0px 5px;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 /* Each icon gets its brand color on hover */
+.footer-social a:hover .fa-google { color: #EA4335; }
+.footer-social a:hover .fa-github { color: rgb(162, 92, 199) }
+.footer-social a:hover .fa-indeed { color: #0A66C2; }
+.footer-social a:hover .fa-linkedin { color: rgb(0, 0, 255)}
 .footer-social a:hover .fa-facebook  { color: #1877F2; }
-.footer-social a:hover .fa-youtube   { color: #FF0000; }
 .footer-social a:hover .fa-instagram { color: #E1306C; }
+.footer-social a:hover .fa-youtube   { color: #FF0000; }
 .footer-social a:hover .fa-tiktok    { color: #69C9D0; }
+
 
 /* Footer Nav Links */
 .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 20px);
     margin-bottom: 20px;
 }
-
 .footer-links a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: clamp(11px, 1.5vw, 12px);
     font-weight: bold;
     letter-spacing: 1px;
-    margin: 0 15px;
+    margin: auto;
     transition: color 0.3s;
 }
+.footer-links a:hover { color: white; }
 
-.footer-links a:hover {
-    color: white;
-    font-size: 14px;
-}
 
 /* Copyright text */
 .footer-copy {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 12px;
-    margin: 0;
+    font-size: clamp(11px, 1.5vw, 12px);
+    text-decoration: none;
+}
+.footer-copy:hover { color: white; }
+
+
+
+
+
+
+
+/* ----------------------- */
+/* -- Media width -------- */
+
+@media (max-width: 768px) {
+  
+    #hi { display: none; }
+
+    header { 
+        justify-content: center;
+        border-bottom: 0.5px solid rgba(255,255,255,0.2);
+    }
+
+    #logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        left: 20px;
+    }
+
+    .search-box {
+        position: absolute;
+        right: 20px;
+    }
+    .search-box input { 
+        width: 80px; 
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        padding: 20px 0;
+        position: sticky;
+        top: 60px;
+        left: 0;
+        z-index: 998;
+    }
+    nav.open { display: flex; }
 }
