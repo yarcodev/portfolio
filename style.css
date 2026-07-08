@@ -6,7 +6,7 @@
 
 body {
 	background-color: rgb(0, 0, 0);
-    color: silver;
+    color: rgb(255, 255, 255);
 	width: 100%;
 	margin: auto;
 	text-align: center;
@@ -131,12 +131,14 @@ nav a:hover {
 
 
 /* ----------------------- */
-/* -- MAIN --------------- */
+/* -- MAIN_HOME PAGE ----- */
+
 main {
-  padding: 40px 20px;
+  padding: 40px 100px;
 }
 main h1 {
-  color: white;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
   font-size: clamp(22px, 4vw, 36px);
   margin-bottom: 10px;
 }
@@ -147,6 +149,37 @@ main p {
 }
 
 
+/* ----------------------- */
+/* -- About Page --------- */
+
+#aboutPage{
+  display: flex;              
+  flex-direction: column;     
+  padding: 40px 100px;
+  max-width: 1000px;
+  margin: 0 auto;  
+}
+#aboutPage h1 {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+#aboutPage h2 {
+  color: rgb(200, 0, 255);
+  text-align: left;
+  margin-bottom: 20px;
+}
+#aboutPage p {
+  color: light rgb(128, 128, 128);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  text-align: justify;
+  margin-bottom: 50px;
+  line-height: 1.5rem;
+}
+#aboutPage .commit {
+    text-align: right;
+
+}
 
 
 /* ----------------------- */
@@ -270,4 +303,5 @@ footer {
         z-index: 998;
     }
     nav.open { display: flex; }
+
 }
