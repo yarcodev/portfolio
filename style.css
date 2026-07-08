@@ -171,14 +171,13 @@ main p {
 }
 #aboutPage p {
   color: light rgb(128, 128, 128);
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   text-align: justify;
   margin-bottom: 50px;
   line-height: 1.5rem;
 }
 #aboutPage .commit {
     text-align: right;
-
 }
 
 
