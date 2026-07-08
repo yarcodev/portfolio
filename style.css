@@ -155,8 +155,8 @@ main p {
 #aboutPage{
   display: flex;              
   flex-direction: column;     
-  padding: 40px 20px;
-  max-width: 1000px;
+  padding: 40px 40px;
+  max-width: 900px;
   margin: 0 auto;  
 }
 #aboutPage h1 {
@@ -171,7 +171,7 @@ main p {
 }
 #aboutPage p {
   color: light rgb(128, 128, 128);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: 1.2rem;
   text-align: justify;
   margin-bottom: 50px;
   line-height: 1.5rem;
